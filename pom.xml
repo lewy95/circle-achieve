@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>circle-achieve</artifactId>
+    <!-- 这个也是一个父项目，必须为pom -->
+    <packaging>pom</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <parent>
+        <artifactId>circle-parent</artifactId>
+        <groupId>cn.xzxy.lewy</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <properties>
+        <circle-framework.version>1.0.0-SNAPSHOT</circle-framework.version>
+        <circle-framework-core.version>${circle-framework.version}</circle-framework-core.version>
+        <circle-framework-mvc.version>${circle-framework.version}</circle-framework-mvc.version>
+        <circle-framework-mybatis.version>${circle-framework.version}</circle-framework-mybatis.version>
+        <circle-framework-logback.version>${circle-framework.version}</circle-framework-logback.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>cn.xzxy.lewy</groupId>
+                <artifactId>circle-framework-core</artifactId>
+                <version>${circle-framework-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xzxy.lewy</groupId>
+                <artifactId>circle-framework-mvc</artifactId>
+                <version>${circle-framework-mvc.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xzxy.lewy</groupId>
+                <artifactId>circle-framework-mybatis</artifactId>
+                <version>${circle-framework-mybatis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xzxy.lewy</groupId>
+                <artifactId>circle-framework-logback</artifactId>
+                <version>${circle-framework-logback.version}</version>
+            </dependency>
+            <!-- 更多的模块添加在下面 -->
+        </dependencies>
+    </dependencyManagement>
+</project>

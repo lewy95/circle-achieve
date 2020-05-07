@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.xzxy.lewy</groupId>
+        <artifactId>circle-achieve</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <artifactId>circle-achieve-provider</artifactId>
+    <version>1.0.1-SNAPSHOT</version>
+    <name>circle-achieve-provider</name>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.xzxy.lewy</groupId>
+            <artifactId>circle-framework-mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.xzxy.lewy</groupId>
+            <artifactId>circle-framework-mvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.xzxy.lewy</groupId>
+            <artifactId>circle-framework-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.xzxy.lewy</groupId>
+            <artifactId>circle-framework-logback</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>circle-provider</finalName>
+        <plugins>
+            <!-- 此包不需要deploy-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>cn.xzxy.lewy.circleachieve.CircleAchieveProviderApplication</mainClass>
+                    <layout>ZIP</layout>
+                    <executable>true</executable>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!-- 跳过test -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+            <!--mybatis反向生成插件-->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.2</version>
+                <configuration>
+                    <configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+                    <verbose>true</verbose>
+                    <overwrite>true</overwrite>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
