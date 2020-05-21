@@ -11,11 +11,6 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <!--数据库链接地址账号密码 -->
-        <!--        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"-->
-        <!--                        connectionURL="jdbc:mysql://10.241.67.130:3300/integrated_service"-->
-        <!--                        userId="wonders"-->
-        <!--                        password=">Y9%xdsfs45">-->
-        <!--        </jdbcConnection>-->
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
                         connectionURL="jdbc:mysql://127.0.0.1:3306/sakila?serverTimezone=UTC"
                         userId="root"
@@ -45,8 +40,5 @@
                selectByExampleQueryId="false">
             <property name="useActualColumnNames" value="false"/>
         </table>
-        <!--        <table schema="" tableName="t_b_appointment_gst" ></table>-->
-        <!--        <table schema="" tableName="t_b_kafka_log" ></table>-->
-
     </context>
 </generatorConfiguration>
