@@ -1,13 +1,13 @@
 server:
   servlet:
-    context-path: /circle-provider-pre
+    context-path: /circle-provider-dev
   port: 8082
 
 spring:
   application:
     name: achieve-provider
   profiles:
-    active: pre
+    active: prod
   #数据库配置
   datasource:
     #1.JDBC
