@@ -79,7 +79,7 @@ circle:
     module-name: circle-achieve-provider
     level: debug
     file:
-      path: /var/log/server/achieve/provider
+      path: /Users/lewy/WorkSets/logSet/java/circle-achieve
   # swagger 配置
   swagger:
     base-package: cn.xzxy.lewy
