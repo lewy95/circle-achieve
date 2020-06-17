@@ -59,12 +59,12 @@ public class WebLogAspect {
         logRecord.setClientIpaddr(request.getRemoteAddr());
 
         // 一个 Signature 示例：
-        // JsonResponseEntity com.maniujk.appserver.controller.QuestionController.treatDetailDoc(TreatDetailDocReq)
+        // JsonResponseEntity cn.controller.QuestionController.treatDetailDoc(TreatDetailDocReq)
         String methodName = pjp.getSignature().getName(); // treatDetailDoc
         Class<?> classTarget = pjp.getTarget().getClass();
         // 记录入参
         Class<?>[] par = ((MethodSignature) pjp.getSignature()).getParameterTypes();
-        // JsonResponseEntity com.maniujk.appserver.controller.QuestionController.treatDetailDoc(TreatDetailDocReq)
+        // JsonResponseEntity cn.controller.QuestionController.treatDetailDoc(TreatDetailDocReq)
         Method objMethod = classTarget.getMethod(methodName, par);
         // 记录类名
         logRecord.setInvokeClass(classTarget.getSimpleName());
