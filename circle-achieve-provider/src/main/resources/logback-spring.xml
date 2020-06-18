@@ -7,7 +7,7 @@
                     converterClass="org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter"/>
     <conversionRule conversionWord="wEx"
                     converterClass="org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter"/>
-    <conversionRule conversionWord="ip" converterClass="cn.xzxy.lewy.core.converter.LogbackNativeIPConverter"/>
+    <conversionRule conversionWord="ip" converterClass="cn.xzxy.lewy.framework.core.converter.LogbackNativeIPConverter"/>
 
     <!-- 获取配置信息（只能通过springProperty获取yml/properties中变量）
          appName和moduleName是不一样的，比如：

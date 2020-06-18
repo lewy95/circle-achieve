@@ -1,12 +1,12 @@
 package cn.xzxy.lewy.circleachieve;
 
+import cn.xzxy.lewy.framework.mvc.annotation.EnableSwagger2;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
+@EnableSwagger2
 @SpringBootApplication
-@ComponentScan("cn.xzxy.lewy.mvc.config")
 @MapperScan("cn.xzxy.lewy.circleachieve.mapper")
 public class CircleAchieveProviderApplication {
 

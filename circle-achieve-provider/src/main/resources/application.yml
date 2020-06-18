@@ -85,9 +85,9 @@ circle:
     enabled: true
     base-package: cn.xzxy.lewy.circleachieve
     contact:
-      email:
-      name:
-      url: /
+      email: lewy95@aliyun.com
+      name: Lewy Robert
+      url: https://mail.aliyun.com/alimail/auth/login
     description: 'circle achieve swagger'
     title: achieve-provider
     version: 1.0.0

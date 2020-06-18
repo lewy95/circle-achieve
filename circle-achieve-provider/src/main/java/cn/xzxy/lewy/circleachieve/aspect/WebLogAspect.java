@@ -2,8 +2,8 @@ package cn.xzxy.lewy.circleachieve.aspect;
 
 import cn.xzxy.lewy.circleachieve.pojo.LogInterfaceWithBLOBs;
 import cn.xzxy.lewy.circleachieve.service.InterfaceLogService;
-import cn.xzxy.lewy.core.model.JsonResponseEntity;
-import cn.xzxy.lewy.mvc.exception.BusinessException;
+import cn.xzxy.lewy.framework.core.model.JsonResponseEntity;
+import cn.xzxy.lewy.framework.mvc.exception.BusinessException;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
