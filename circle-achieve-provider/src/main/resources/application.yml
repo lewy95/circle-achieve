@@ -82,7 +82,8 @@ circle:
       path: /Users/lewy/WorkSets/logSet/java/circle-achieve
   # swagger 配置
   swagger:
-    base-package: cn.xzxy.lewy
+    enabled: true
+    base-package: cn.xzxy.lewy.circleachieve
     contact:
       email:
       name:

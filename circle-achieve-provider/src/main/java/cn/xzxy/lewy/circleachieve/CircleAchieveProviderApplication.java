@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("cn.xzxy.lewy.mvc.config")
 @MapperScan("cn.xzxy.lewy.circleachieve.mapper")
 public class CircleAchieveProviderApplication {
 

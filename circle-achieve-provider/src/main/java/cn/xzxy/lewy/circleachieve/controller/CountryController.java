@@ -5,6 +5,7 @@ import cn.xzxy.lewy.circleachieve.dto.CountryDetailReq;
 import cn.xzxy.lewy.circleachieve.service.CountryService;
 import cn.xzxy.lewy.core.model.JsonResponseEntity;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -19,6 +20,7 @@ public class CountryController {
     private CountryService countryService;
 
     @PostMapping("detail")
+    @ApiOperation(value = "查询国家详情", notes = "查询国家详情")
     @OpLog(methodCode = "getCountry", methodName = "获取国家信息")
     public JsonResponseEntity getCountry(@RequestBody @Valid CountryDetailReq countryDetailReq) {
 
