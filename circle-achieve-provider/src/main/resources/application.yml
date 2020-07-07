@@ -5,7 +5,7 @@ server:
 
 spring:
   application:
-    name: achieve-provider
+    name: circle-achieve-provider
   profiles:
     active: {spring.profiles.active}
   #数据库配置

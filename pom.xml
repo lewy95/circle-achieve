@@ -11,6 +11,8 @@
 
     <modules>
         <module>circle-achieve-provider</module>
+        <module>circle-achieve-api</module>
+        <module>circle-achieve-consumer</module>
     </modules>
 
     <parent>
@@ -25,6 +27,7 @@
         <circle-framework-mvc.version>${circle-framework.version}</circle-framework-mvc.version>
         <circle-framework-mybatis.version>${circle-framework.version}</circle-framework-mybatis.version>
         <circle-framework-logback.version>${circle-framework.version}</circle-framework-logback.version>
+        <circle-framework-openFeign.version>${circle-framework.version}</circle-framework-openFeign.version>
     </properties>
 
     <dependencyManagement>
@@ -48,6 +51,11 @@
                 <groupId>cn.xzxy.lewy</groupId>
                 <artifactId>circle-framework-logback</artifactId>
                 <version>${circle-framework-logback.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xzxy.lewy</groupId>
+                <artifactId>circle-framework-openFeign</artifactId>
+                <version>${circle-framework-openFeign.version}</version>
             </dependency>
             <!-- 更多的模块添加在下面 -->
         </dependencies>

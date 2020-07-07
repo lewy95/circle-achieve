@@ -1,0 +1,24 @@
+server:
+  servlet:
+    context-path: /circle-consumer-sit
+  port: 80
+
+spring:
+  application:
+    name: circle-achieve-consumer
+  profiles:
+    active: sit
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    default-property-inclusion: ALWAYS
+    time-zone: GMT+8
+
+circle:
+  # 日志配置
+  log:
+    application-name: circle-achieve
+    module-name: circle-achieve-consumer
+    level: debug
+    file:
+      path: /Users/lewy/WorkSets/logSet/java/circle-achieve
+

@@ -1,4 +1,4 @@
-package cn.xzxy.lewy.circleachieve.dto;
+package cn.xzxy.lewy.circleachieve.dto.country;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
