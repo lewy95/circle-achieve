@@ -1,7 +1,7 @@
 server:
   servlet:
     context-path: /circle-consumer-pre
-  port: 80
+  port: 8081
 
 spring:
   application:
@@ -21,4 +21,14 @@ circle:
     level: debug
     file:
       path: /Users/lewy/WorkSets/logSet/java/circle-achieve
-
+  # swagger 配置
+  swagger:
+    enabled: true
+    base-package: cn.xzxy.lewy.circleachieve
+    contact:
+      email: lewy95@aliyun.com
+      name: Lewy Robert
+      url: https://mail.aliyun.com/alimail/auth/login
+    description: 'circle achieve swagger'
+    title: achieve-consumer
+    version: 1.0.0

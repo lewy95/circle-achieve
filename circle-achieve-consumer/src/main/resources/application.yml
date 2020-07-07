@@ -32,6 +32,15 @@ circle:
     description: 'circle achieve swagger'
     title: achieve-consumer
     version: 1.0.0
+  openfeign:
+    global-mapping:
+      enabled: false
+    mapping:
+      enabled: true
+    sign:
+      app-id:
+      app-key:
+      mid-path:
 
 feign:
   compression:

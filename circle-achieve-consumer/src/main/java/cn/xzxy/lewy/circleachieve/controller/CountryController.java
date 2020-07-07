@@ -6,6 +6,7 @@ import cn.xzxy.lewy.circleachieve.vs.CountryVs;
 import cn.xzxy.lewy.framework.core.model.JsonResponseEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import javax.validation.Valid;
  * @author lewy95
  */
 @Api(value = "国家管理接口")
+@Slf4j
 @RestController
 @RequestMapping("/consumer/rest/country")
 public class CountryController {
