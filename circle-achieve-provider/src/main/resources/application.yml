@@ -22,17 +22,36 @@ circle:
     description: 'circle achieve swagger'
     title: achieve-provider
     version: 1.0.0
+  # redis 配置
+  config:
+    redis:
+      redisson:
+        configPath: redisson-single-dev.yml
 
 spring:
   application:
     name: circle-achieve-provider
-  #profiles:
-  #  active: {spring.profiles.active}
-  # redis 配置
-  redis:
-    redisson:
-      configPath: redisson-single-dev.yml
-  # 数据库配置
+  profiles:
+    active: {spring.profiles.active}
+  # mongodb 配置
+  data:
+    mongodb:
+      uri: mongodb://hadoop03/circle
+
+  # kafka 配置
+  kafka:
+    bootstrap-servers: hadoop01:9092,hadoop02:9092,hadoop03:9092
+    listener:
+      ack-mode: manual_immediate
+    consumer:
+      enable-auto-commit: false
+    producer:
+      acks: 1
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      retries: 3
+      value-serializer: cn.xzxy.lewy.framework.kafka.feature.serialize.JSONSerializer
+
+  # mysql 配置
   datasource:
     #1.JDBC
     type: com.alibaba.druid.pool.DruidDataSource

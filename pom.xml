@@ -24,6 +24,7 @@
     <properties>
         <circle-framework.version>1.0.0-SNAPSHOT</circle-framework.version>
         <circle-framework-core.version>${circle-framework.version}</circle-framework-core.version>
+        <circle-framework-kafka.version>${circle-framework.version}</circle-framework-kafka.version>
         <circle-framework-cache.version>${circle-framework.version}</circle-framework-cache.version>
         <circle-framework-mvc.version>${circle-framework.version}</circle-framework-mvc.version>
         <circle-framework-mybatis.version>${circle-framework.version}</circle-framework-mybatis.version>
@@ -47,6 +48,11 @@
                 <groupId>cn.xzxy.lewy</groupId>
                 <artifactId>circle-framework-cache</artifactId>
                 <version>${circle-framework-cache.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.xzxy.lewy</groupId>
+                <artifactId>circle-framework-kafka</artifactId>
+                <version>${circle-framework-kafka.version}</version>
             </dependency>
             <dependency>
                 <groupId>cn.xzxy.lewy</groupId>

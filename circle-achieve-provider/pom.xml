@@ -17,6 +17,10 @@
     <dependencies>
         <dependency>
             <groupId>cn.xzxy.lewy</groupId>
+            <artifactId>circle-framework-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.xzxy.lewy</groupId>
             <artifactId>circle-framework-cache</artifactId>
         </dependency>
         <dependency>

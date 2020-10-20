@@ -42,6 +42,8 @@ public class CountryController implements CountryApi {
     }
 
     @PostMapping("/detailWithCache")
+    @ApiOperation(value = "查询国家详情（缓存）", notes = "查询国家详情（缓存）")
+    @OpLog(methodCode = "getCountryWithCache", methodName = "获取国家信息（缓存）")
     public JsonResponseEntity getCountryWithCache(@RequestBody CountryDetailReq countryDetailReq) {
 
         String jsonStr = null;
