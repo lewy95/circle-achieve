@@ -92,3 +92,10 @@ circle:
     title: achieve-provider
     version: 1.0.0
 
+logging:
+  level:
+    org:
+      apache: error
+      redisson:
+        connection:
+          DNSMonitor: info

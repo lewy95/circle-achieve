@@ -3,12 +3,36 @@ server:
     context-path: /circle-provider
   port: 8082
 
+circle:
+  # 日志配置
+  log:
+    application-name: circle-achieve
+    module-name: circle-achieve-provider
+    level: debug
+    file:
+      path: /Users/lewy/WorkSets/logSet/java/circle-achieve
+  # swagger 配置
+  swagger:
+    enabled: true
+    base-package: cn.xzxy.lewy.circleachieve
+    contact:
+      email: lewy95@aliyun.com
+      name: Lewy Robert
+      url: https://mail.aliyun.com/alimail/auth/login
+    description: 'circle achieve swagger'
+    title: achieve-provider
+    version: 1.0.0
+
 spring:
   application:
     name: circle-achieve-provider
-  profiles:
-    active: {spring.profiles.active}
-  #数据库配置
+  #profiles:
+  #  active: {spring.profiles.active}
+  # redis 配置
+  redis:
+    redisson:
+      configPath: redisson-single-dev.yml
+  # 数据库配置
   datasource:
     #1.JDBC
     type: com.alibaba.druid.pool.DruidDataSource
@@ -72,23 +96,10 @@ mybatis:
 pagehelper:
   helper-dialect: mysql
 
-circle:
-  # 日志配置
-  log:
-    application-name: circle-achieve
-    module-name: circle-achieve-provider
-    level: debug
-    file:
-      path: /Users/lewy/WorkSets/logSet/java/circle-achieve
-  # swagger 配置
-  swagger:
-    enabled: true
-    base-package: cn.xzxy.lewy.circleachieve
-    contact:
-      email: lewy95@aliyun.com
-      name: Lewy Robert
-      url: https://mail.aliyun.com/alimail/auth/login
-    description: 'circle achieve swagger'
-    title: achieve-provider
-    version: 1.0.0
-
+logging:
+  level:
+    org:
+      apache: error
+      redisson:
+        connection:
+          DNSMonitor: info

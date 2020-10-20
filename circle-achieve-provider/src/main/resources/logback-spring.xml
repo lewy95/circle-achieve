@@ -14,11 +14,11 @@
          appName：lewy-kafka
          moduleName：lewy-kafka-dev
     -->
-    <springProperty scope="context" name="server_port" source="server.port"/>
-    <springProperty scope="context" name="appName" source="circle.log.application-name"/>
-    <springProperty scope="context" name="moduleName" source="circle.log.module-name"/>
-    <springProperty scope="context" name="logLevel" source="circle.log.level"/>
-    <springProperty scope="context" name="logFilePath" source="circle.log.file.path"/>
+    <springProperty scope="context" name="server_port" source="server.port" defaultValue="0000"/>
+    <springProperty scope="context" name="appName" source="circle.log.application-name" defaultValue="appName"/>
+    <springProperty scope="context" name="moduleName" source="circle.log.module-name" defaultValue="moduleName"/>
+    <springProperty scope="context" name="logLevel" source="circle.log.level" defaultValue="info"/>
+    <springProperty scope="context" name="logFilePath" source="circle.log.file.path" defaultValue="/Users/lewy/WorkSets/logSet/java/appName"/>
 
     <!-- pattern layout-->
     <property name="CONSOLE_LOG_PATTERN"
@@ -144,7 +144,6 @@
             <onMismatch>DENY</onMismatch>
         </filter>
     </appender>
-
 
     <root level="${logLevel}">
         <appender-ref ref="STDOUT"/>

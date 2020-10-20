@@ -8,7 +8,11 @@ spring:
     name: circle-achieve-provider
   profiles:
     active: dev
-  #数据库配置
+  # redis 配置
+  redis:
+    redisson:
+      configPath: redisson-single-dev.yml
+  # 数据库配置
   datasource:
     #1.JDBC
     type: com.alibaba.druid.pool.DruidDataSource
@@ -91,3 +95,11 @@ circle:
     description: 'circle achieve swagger'
     title: achieve-provider
     version: 1.0.0
+
+logging:
+  level:
+    org:
+      apache: error
+      redisson:
+        connection:
+          DNSMonitor: info
