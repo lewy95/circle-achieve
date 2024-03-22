@@ -21,7 +21,7 @@ import javax.validation.Valid;
         configuration = UnMappingHandler.class)
 // name >>> 注册中心名称，用于服务发现
 // url  >>> 可以指定路径，用于本地调试
-// configuration = UnMappingHandler.class >>>封装的配置，表示接口不走中台加签名的方式
+// configuration = UnMappingHandler.class >>> 用于表示不走加签方式
 public interface CountryApi {
 
     @PostMapping(value = "/detail", consumes = MediaType.APPLICATION_JSON_VALUE)
